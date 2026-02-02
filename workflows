@@ -30,3 +30,28 @@ git commit -m "Add CI workflow"
 git push origin main
 
 
+
+
+
+name :CI demo
+on:
+push:
+branches:
+-main
+pull_request:
+branches:
+_main
+
+workflow_dispatch
+
+
+
+
+
+
+
+
+
+
+
+
