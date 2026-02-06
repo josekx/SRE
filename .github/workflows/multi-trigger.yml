@@ -1,0 +1,20 @@
+name: Multi Trigger Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  identify-trigger:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display trigger source
+        run: echo "Workflow triggered by: ${{ github.event_name }}"
